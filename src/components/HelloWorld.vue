@@ -14,15 +14,7 @@
       </div>
     </div>
     <button @click="prevSlide">&lt;</button>
-    <button @click="openModal">Shop new Things</button>
     <button @click="nextSlide">&gt;</button>
-  </div>
-  <div v-if="modalWindow">
-    <div class="greyModal modalToggle"></div>
-    <div class="modalContent modalToggle">
-      This is the content of my modal dialog
-      <button @click="closeModal">X</button>
-    </div>
   </div>
 </template>
 
@@ -31,25 +23,20 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 
 const images = ["Bild.jpg", "Bild2.jpg", "Bild3.jpg"];
 const currentIndex = ref(0);
-const modalWindow = ref(false);
-
-function openModal() {
-  modalWindow.value = true;
-}
-
-function closeModal() {
-  modalWindow.value = false;
-}
 
 const prevSlide = () => {
   if (currentIndex.value > 0) {
     currentIndex.value--;
+  } else {
+    currentIndex.value = images.length - 1; // Zur letzten Folie springen
   }
 };
 
 const nextSlide = () => {
   if (currentIndex.value < images.length - 1) {
     currentIndex.value++;
+  } else {
+    currentIndex.value = 0; // Zur ersten Folie zurückkehren
   }
 };
 
@@ -84,6 +71,21 @@ img {
 button {
   margin: 10px;
   font-size: 24px;
+}
+
+button {
+  background-color: #b60505;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #fd8300;
 }
 
 div.greyModal {
