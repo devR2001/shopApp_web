@@ -28,7 +28,7 @@ const prevSlide = () => {
   if (currentIndex.value > 0) {
     currentIndex.value--;
   } else {
-    currentIndex.value = images.length - 1; // Zur letzten Folie springen
+    currentIndex.value = images.length - 1;
   }
 };
 
@@ -36,7 +36,7 @@ const nextSlide = () => {
   if (currentIndex.value < images.length - 1) {
     currentIndex.value++;
   } else {
-    currentIndex.value = 0; // Zur ersten Folie zurückkehren
+    currentIndex.value = 0;
   }
 };
 

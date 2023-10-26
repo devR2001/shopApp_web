@@ -36,7 +36,7 @@
   background-color: #e4e3e3;
   padding: 20px;
   border-radius: 5px;
-  text-align: center; /* Hier bleibt die Textzentrierung */
+  text-align: center;
   margin: 0 auto;
 }
 
