@@ -6,26 +6,26 @@
         @click="activeTab = 'details'"
         :class="{ active: activeTab === 'details' }"
       >
-        Details
+        {{ $t("DetailsView.details") }}
       </button>
       <button
         class="tab-button"
         @click="activeTab = 'fit'"
         :class="{ active: activeTab === 'fit' }"
       >
-        FIT
+        {{ $t("DetailsView.fit") }}
       </button>
       <button
         class="tab-button"
         @click="activeTab = 'materialCare'"
         :class="{ active: activeTab === 'materialCare' }"
       >
-        MATERIAL & CARE
+        {{ $t("DetailsView.m&c") }}
       </button>
     </div>
 
     <div v-if="activeTab === 'details'">
-      <h2>DETAILS</h2>
+      <h2>{{ $t("DetailsView.details") }}</h2>
       <p>
         Collar: stand-up collar <br />
         Fastener: zip <br />
@@ -39,7 +39,7 @@
     </div>
 
     <div v-if="activeTab === 'fit'">
-      <h2>FIT</h2>
+      <h2>{{ $t("DetailsView.fit") }}</h2>
       <ul>
         <li>Fit: Regular Fit</li>
         <li>Back length: approx. 71 cm in size L</li>
@@ -47,7 +47,8 @@
     </div>
 
     <div v-if="activeTab === 'materialCare'">
-      <h2>MATERIAL & CARE</h2>
+      {{ $t("DetailsView.m&c") }}
+      <h2></h2>
       <ul>
         <li>Material: woven fabric</li>
         <li>Quality: soft</li>
