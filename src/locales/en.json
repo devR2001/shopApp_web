@@ -1,10 +1,66 @@
 {
   "DetailsView": {
-    "details": "DETAILS",
-    "fit": "FIT",
-    "m&c": "MATERIAL & CARE"
+    "details": {
+      "elementHeader": "DETAILS",
+      "elementCollar": "Collar: stand-up collar",
+      "elementFastener": "Fastener: zip",
+      "elementSleeves": "Sleeves: long sleeves",
+      "elementPockets": "Pockets: inside pocket",
+      "elementDetails": "Details: logo",
+      "elementHem": "Hem: elasticated hems",
+      "elementEAN": "EAN: 4099973786727",
+      "elementArtNum": "Article Number: 2131770.6290.S"
+    },
+    "fit": {
+      "elementHeader": "FIT",
+      "elementFit": "Fit: Regular Fit",
+      "elementbl": "Back length: approx. 71 cm in size L"
+    },
+    "m&c": {
+      "elementHeader": "MATERIAL & CARE",
+      "elementMaterial": "Material: woven fabric",
+      "elementQuality": "Quality: soft",
+      "elementFilling": "Filling: slightly padded",
+      "elementLevel": "Level of warmth: Slightly warm",
+      "elementComposition": "MATERIAL COMPOSITION",
+      "elementOuter": "100% Polyester",
+      "elementCare": "CARE INSTRUCTIONS",
+      "elementChlore": "Do not chlore",
+      "elementWash": "Gentle wash cycle 30°",
+      "elementDry": "Not dry cleaning",
+      "elementIron": "Do not iron"
+    }
   },
-  "haas": {
-    "sfsc": "ssdv"
+  "Buttons": {
+    "buttons": {
+      "addToCart": "Add to Cart",
+      "close": "Close"
+    }
+  },
+  "Sizes": {
+    "sizes": {
+      "s": "S",
+      "m": "M",
+      "l": "L",
+      "xl": "XL",
+      "xxl": "XXL",
+      "3xl": "3XLA"
+    }
+  },
+  "ProjectCard": {
+    "buttons": {
+      "addToCaart": "Add to Cart"
+    }
+  },
+  "WebFooter": {
+    "service": "SERVICE",
+    "contact": "Contact",
+    "help": "Help & FAQ",
+    "size": "Get help for size",
+    "more": "ABOUT S.OLIVER",
+    "newsletter": "Newsletter",
+    "sog": "s.Oliver Group",
+    "career": "Career",
+    "wishlist": "Wishlist"
   }
 }
