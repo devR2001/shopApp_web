@@ -70,52 +70,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import "@/assets/style/style.css";
 
 const activeTab = ref("details");
 </script>
-
-<style scoped>
-.container {
-  background-color: #e7e6e6;
-  padding: 20px;
-}
-
-.tab-content {
-  margin-top: 10px;
-}
-
-.tab-button {
-  background-color: #6d6d6d;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 5px;
-  transition: background-color 0.3s;
-}
-
-.tab-button.active {
-  background-color: #b60505;
-}
-
-.tab-button.active span {
-  color: #fff;
-}
-
-.tab-button:hover {
-  background-color: #b60505;
-}
-
-.tab-buttons {
-  margin-top: 10px;
-}
-
-.tab-button span {
-  color: #b60505;
-  font-weight: bold;
-}
-
-.tab-button.active span {
-  color: #fff;
-}
-</style>
