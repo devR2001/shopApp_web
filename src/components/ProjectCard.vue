@@ -23,92 +23,130 @@
     <div v-if="showOverlay" class="overlay">
       <div class="overlay-content">
         <div class="">
-          <div class="slider">
-            <div v-if="navy">
-              <img
-                :src="require(`@/images/Black/${images[currentIndex]}`)"
-                alt="Bild"
-                class="img-responsive"
-                style="max-height: 350px; max-width: 100%"
-              />
+          <div style="height: 400px" class="bordered-div">
+            <div class="slider">
+              <div v-if="navy">
+                <img
+                  :src="require(`@/images/Black/${images[currentIndex]}`)"
+                  alt="Bild"
+                  class="img-responsive"
+                  style="max-height: 350px; max-width: 100%"
+                />
+              </div>
+              <div v-if="turquoise">
+                <img
+                  :src="require(`@/images/Blue/${images[currentIndex]}`)"
+                  alt="Bild"
+                  class="img-responsive"
+                  style="max-height: 350px; max-width: 100%"
+                />
+              </div>
+              <div v-if="olive">
+                <img
+                  :src="require(`@/images/Gray/${images[currentIndex]}`)"
+                  alt="Bild"
+                  class="img-responsive"
+                  style="max-height: 350px; max-width: 100%"
+                />
+              </div>
             </div>
-            <div v-if="turquoise">
-              <img
-                :src="require(`@/images/Blue/${images[currentIndex]}`)"
-                alt="Bild"
-                class="img-responsive"
-                style="max-height: 350px; max-width: 100%"
-              />
+            <div class="slider-buttons">
+              <button @click="prevSlide">&lt;</button>
+              <button @click="nextSlide">&gt;</button>
             </div>
-            <div v-if="olive">
-              <img
-                :src="require(`@/images/Gray/${images[currentIndex]}`)"
-                alt="Bild"
-                class="img-responsive"
-                style="max-height: 350px; max-width: 100%"
-              />
-            </div>
-          </div>
-          <div class="slider-buttons">
-            <button @click="prevSlide">&lt;</button>
-            <button @click="nextSlide">&gt;</button>
-          </div>
-        </div>
-        <div class="">
-          <h2>Description</h2>
-          <div class="info-box">
-            <p>{{ name }}</p>
-            <p>Preis: {{ price }} €</p>
-            <p>Farbe:</p>
 
-            <button
-              @click="selectNavy"
-              style="width: 40px; height: 40px; border-radius: 50%"
-            >
-              <img
-                src="@/images/clothesIcons/navy.webp"
-                alt="navy"
-                style="width: 100%; border-radius: 50%"
-              />
-            </button>
-            <button
-              @click="selectTurquoise"
-              style="width: 40px; height: 40px; border-radius: 50%"
-            >
-              <img
-                src="@/images/clothesIcons/turquoise.webp"
-                alt="turquoise"
-                style="width: 100%; border-radius: 50%"
-              />
-            </button>
-            <button
-              @click="selectOlive"
-              style="width: 40px; height: 40px; border-radius: 50%"
-            >
-              <img
-                src="@/images/clothesIcons/olive.webp"
-                alt="olive"
-                style="width: 100%; border-radius: 50%"
-              />
-            </button>
+            <div class="description-box">
+              <h2>Description</h2>
+              <div class="info-box">
+                <p>{{ name }}</p>
+                <p>Preis: {{ price }} €</p>
+                <p>Farbe:</p>
 
-            <p>
-              Größe: <button>S</button>
-              <button>M</button>
-              <button>L</button>
-              <button>XL</button>
-              <button>XXL</button>
-              <button>3XL</button>
-            </p>
+                <button
+                  @click="selectNavy"
+                  style="width: 40px; height: 40px; border-radius: 50%"
+                >
+                  <img
+                    src="@/images/clothesIcons/navy.webp"
+                    alt="navy"
+                    style="width: 100%; border-radius: 50%"
+                  />
+                </button>
+                <button
+                  @click="selectTurquoise"
+                  style="width: 40px; height: 40px; border-radius: 50%"
+                >
+                  <img
+                    src="@/images/clothesIcons/turquoise.webp"
+                    alt="turquoise"
+                    style="width: 100%; border-radius: 50%"
+                  />
+                </button>
+                <button
+                  @click="selectOlive"
+                  style="width: 40px; height: 40px; border-radius: 50%"
+                >
+                  <img
+                    src="@/images/clothesIcons/olive.webp"
+                    alt="olive"
+                    style="width: 100%; border-radius: 50%"
+                  />
+                </button>
+
+                <p>
+                  Größe:
+                  <button
+                    :class="{ selected: selectedSize === 'S' }"
+                    @click="selectSize('S')"
+                  >
+                    S
+                  </button>
+                  <button
+                    :class="{ selected: selectedSize === 'M' }"
+                    @click="selectSize('M')"
+                  >
+                    M
+                  </button>
+                  <button
+                    :class="{ selected: selectedSize === 'L' }"
+                    @click="selectSize('L')"
+                  >
+                    L
+                  </button>
+                  <button
+                    :class="{ selected: selectedSize === 'XL' }"
+                    @click="selectSize('XL')"
+                  >
+                    XL
+                  </button>
+                  <button
+                    :class="{ selected: selectedSize === 'XXL' }"
+                    @click="selectSize('XXL')"
+                  >
+                    XXL
+                  </button>
+                  <button
+                    :class="{ selected: selectedSize === '3XL' }"
+                    @click="selectSize('3XL')"
+                  >
+                    3XL
+                  </button>
+                </p>
+              </div>
+              <button @click="closeOverlay">Schließen</button>
+            </div>
           </div>
-          <button @click="closeOverlay">Schließen</button>
           <div>
-            <div class="full-width" style="flex-grow: 1">
-              <TabView />
-              <div class="footer">
-                <div class="footer-left">{{ name }}</div>
-                <div class="footer-right">
-                  <button class="add-to-cart">Add to Cart</button>
+            <div class="info-field">
+              <div class="bordered-div">
+                <TabView style="width: 100%" />
+              </div>
+              <div class="bordered-div">
+                <div class="footer">
+                  <div class="footer-left">{{ name }}</div>
+                  <div class="footer-right">
+                    <button class="add-to-cart">Add to Cart</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -138,12 +176,17 @@ const price = ref("");
 const turquoise = ref(false);
 const navy = ref(true);
 const olive = ref(false);
+const selectedSize = ref("");
 
 const allItems = Array.from(Array(20).keys());
 
 const { list, containerProps, wrapperProps } = useVirtualList(allItems, {
   itemWidth: 200,
 });
+
+const selectSize = (size) => {
+  selectedSize.value = size;
+};
 
 const selectTurquoise = () => {
   turquoise.value = true;
@@ -195,12 +238,6 @@ const fetchProductData = async () => {
     name.value = firstProduct.name;
     price.value = firstProduct.price;
     console.log("data:", data);
-    console.log("data.products:", data.products);
-    console.log("data.products[0]:", data.products[0]);
-    console.log("data.products[0].price:", data.products[0].price);
-    console.log("data.products[0].name:", data.products[0].name);
-    console.log("data.products[0].sizes:", data.products[0].sizes);
-    console.log("data.products[0].colors:", data.products[0].colors);
   } catch (error) {
     console.error("Fehler beim Abrufen der Produktinformationen:", error);
   }
@@ -208,14 +245,7 @@ const fetchProductData = async () => {
 
 onMounted(() => {
   fetchProductData();
-
-  const timer = setInterval(() => {
-    nextSlide();
-  }, 4000);
-
-  onBeforeUnmount(() => {
-    clearInterval(timer);
-  });
+  nextSlide();
 });
 </script>
 
@@ -224,6 +254,10 @@ onMounted(() => {
   outline: #ccc;
 }
 
+.selected {
+  background-color: #b60505;
+  color: #fff;
+}
 .overlay {
   position: fixed;
   top: 0;
@@ -336,8 +370,20 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .overlay-content {
-    max-width: 90%;
+    max-width: 80%;
   }
+}
+
+@media (max-width: 768px) {
+  .info-field {
+    margin-top: 450px;
+    justify-content: center;
+  }
+}
+
+.info-field {
+  justify-content: center;
+  width: 100%;
 }
 .footer {
   display: flex;
@@ -373,6 +419,34 @@ onMounted(() => {
   .footer-left {
     text-align: center;
     margin-bottom: 10px;
+  }
+}
+
+.bordered-div {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.description-box {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .bordered-div {
+    flex-direction: column;
+  }
+
+  .description-box {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
   }
 }
 </style>
