@@ -49,7 +49,6 @@
   },
   "ProjectCard": {
     "buttons": {
-      "addToCaart": "Add to Cart"
     }
   },
   "WebFooter": {
@@ -61,6 +60,25 @@
     "newsletter": "Newsletter",
     "sog": "s.Oliver Group",
     "career": "Career",
-    "wishlist": "Wishlist"
+    "wishlist": "Wishlist",
+    "sustainability": "Sustainability",
+    "pay": "Payment",
+    "credit": "Credit card",
+    "paypal": "Paypal",
+    "payia": "Payment in advance",
+    "protocol": "SSL-Protocol",
+    "shipment": "Shipment",
+    "ots": "ONline tracking system",
+    "dhl": "DHL International"
+  },
+  "NewsletterDiscount": {
+    "discount": "10% Newsletter-Discount",
+    "advantage": "Subscribe to thne newsletter and save 10% on your next shopping",
+    "subscribe": "Subscribe"
+  },
+  "NavBar":{
+    "shops": "Shops",
+    "acc": "My account",
+    "sc": "Shopping cart"
   }
 }

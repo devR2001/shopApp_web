@@ -1,27 +1,36 @@
 <template>
   <div class="container">
     <div class="tab-buttons">
-      <button
-        class="tab-button"
-        @click="activeTab = 'details'"
-        :class="{ active: activeTab === 'details' }"
-      >
-        DETAILS
-      </button>
-      <button
-        class="tab-button"
-        @click="activeTab = 'fit'"
-        :class="{ active: activeTab === 'fit' }"
-      >
-        FIT
-      </button>
-      <button
-        class="tab-button"
-        @click="activeTab = 'materialCare'"
-        :class="{ active: activeTab === 'materialCare' }"
-      >
-        MATERIAL & CARE
-      </button>
+      <div class="btn-group">
+        <button
+          class="tab-buttonView"
+          @click="activeTab = 'details'"
+          :class="{ active: activeTab === 'details' }"
+        >
+          DETAILS
+        </button>
+        <button
+          class="tab-buttonView"
+          @click="activeTab = 'fit'"
+          :class="{ active: activeTab === 'fit' }"
+        >
+          FIT
+        </button>
+        <button
+          class="tab-buttonView"
+          @click="activeTab = 'materialCare'"
+          :class="{ active: activeTab === 'materialCare' }"
+        >
+          MATERIAL & CARE
+        </button>
+        <button
+          class="tab-buttonView"
+          @click="activeTab = 'sustainability'"
+          :class="{ active: activeTab === 'sustainability' }"
+        >
+          SUSTAINABILITY
+        </button>
+      </div>
     </div>
 
     <div v-if="activeTab === 'details'">
@@ -62,6 +71,11 @@
       <p>{{ $t("DetailsView.m&c.elementWash") }}</p>
       <p>{{ $t("DetailsView.m&c.elementDry") }}</p>
       <p>{{ $t("DetailsView.m&c.elementIron") }}</p>
+    </div>
+    <div v-if="activeTab === 'sustainability'">
+      <h2>
+        {{ $t("WebFooter.sustainability") }}
+      </h2>
     </div>
   </div>
 </template>

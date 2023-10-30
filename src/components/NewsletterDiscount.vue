@@ -1,9 +1,8 @@
 <template>
   <div class="newsletter-form">
-    <div class="custom-heading">10% Newsletter-Rabatt</div>
+    <div class="custom-heading">{{ $t("NewsletterDiscount.discount") }}</div>
     <p>
-      Abonnieren Sie den Newsletter und sparen Sie 10% bei Ihrem nächsten
-      Einkauf.
+      {{ $t("NewsletterDiscount.advantage") }}
     </p>
     <div class="form-group">
       <div class="custom-input">
@@ -16,7 +15,9 @@
         <input type="text" placeholder="E-Mail-Adresse" />
       </div>
     </div>
-    <button class="custom-button">Abonnieren</button>
+    <button class="custom-button">
+      {{ $t("NewsletterDiscount.subscribe") }}
+    </button>
   </div>
 </template>
 

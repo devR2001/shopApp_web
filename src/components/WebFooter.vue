@@ -2,37 +2,65 @@
   <footer class="footer-web">
     <div class="footer-web-links">
       <div class="footer-web-section">
-        <h3>SERVICE</h3>
+        <h3>{{ $t("WebFooter.service") }}</h3>
         <ul>
-          <li><a href="#">Kontakt</a></li>
-          <li><a href="#">Hilfe & FAQ</a></li>
-          <li><a href="#">Größenberatung</a></li>
+          <li>
+            <a href="#">{{ $t("WebFooter.contact") }}</a>
+          </li>
+          <li>
+            <a href="#">{{ $t("WebFooter.help") }}</a>
+          </li>
+          <li>
+            <a href="#">{{ $t("WebFooter.size") }}</a>
+          </li>
         </ul>
       </div>
       <div class="footer-web-section">
-        <h3>ÜBER S.OLIVER</h3>
+        <h3>{{ $t("WebFooter.more") }}</h3>
         <ul>
-          <li><a href="#">Newsletter</a></li>
-          <li><a href="#">s.Oliver Gruppe</a></li>
-          <li><a href="#">Karriere</a></li>
-          <li><a href="#">Wunschliste</a></li>
-          <li><a href="#">Nachhaltigkeit</a></li>
+          <li>
+            <a href="#">{{ $t("WebFooter.newsletter") }}</a>
+          </li>
+          <li>
+            <a href="#">{{ $t("WebFooter.sog") }}</a>
+          </li>
+          <li>
+            <a href="#">{{ $t("WebFooter.career") }}</a>
+          </li>
+          <li>
+            <a href="#">{{ $t("WebFooter.wishlist") }}</a>
+          </li>
+          <li>
+            <a href="#">{{ $t("WebFooter.sustainability") }}</a>
+          </li>
         </ul>
       </div>
       <div class="footer-web-section">
-        <h3>ZAHLUNG</h3>
+        <h3>{{ $t("WebFooter.pay") }}</h3>
         <ul>
-          <li><a href="#">Kreditkarte</a></li>
-          <li><a href="#">PayPal</a></li>
-          <li><a href="#">Vorkasse</a></li>
-          <li><a href="#">SSL-Protokoll</a></li>
+          <li>
+            <a href="#">{{ $t("WebFooter.credit") }}</a>
+          </li>
+          <li>
+            <a href="#">{{ $t("WebFooter.paypal") }}</a>
+          </li>
+          <li>
+            <a href="#">{{ $t("WebFooter.payia") }}</a>
+          </li>
+          <li>
+            <a href="#">{{ $t("WebFooter.protocol") }}</a>
+          </li>
         </ul>
       </div>
       <div class="footer-web-section">
-        <h3>VERSAND</h3>
+        <h3>{{ $t("WebFooter.shipment") }}</h3>
         <ul>
-          <li><a href="#">Online-Verfolgungssystem</a></li>
-          <li><a href="#">DHL International</a></li>
+          <li>
+            <a href="#">{{ $t("WebFooter.ots") }}</a>
+          </li>
+          <li>
+            <a href="#">{{ $t("WebFooter.dhl") }}</a>
+          </li>
         </ul>
       </div>
     </div>

@@ -52,10 +52,10 @@ a:hover {
 .tab-button {
   background-color: #fcfcfc;
   color: #000;
-  /* padding: 10px 20px; */
-  border-radius: 30px;
+  border-radius: 15px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-right: -10px;
 }
 
 .tab-button.active {
@@ -70,13 +70,51 @@ a:hover {
   background-color: #b60505;
 }
 
-.tab-buttons {
-  margin-top: 10px;
-}
-
 .tab-button span {
   color: #b60505;
   font-weight: bold;
+}
+
+/* Only View Buttons */
+
+.container {
+  background-color: #e7e6e6;
+  padding: 20px;
+}
+
+.tab-buttonView {
+  background-color: #fcfcfc;
+  color: #000;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: -10px;
+}
+
+.tab-buttonView.active {
+  background-color: #c01b1b;
+}
+
+.tab-buttonView.active span {
+  color: #fff;
+}
+
+.tab-buttonView:hover {
+  background-color: #b60505;
+}
+
+.tab-buttonView span {
+  color: #b60505;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .tab-buttonView {
+    display: block; /* Ändert die Anzeige von inline auf block, um sie untereinander anzuordnen */
+    margin: 0; /* Entfernt den rechten Margin */
+    margin-bottom: 10px;
+    text-align: center; /* Fügt einen unteren Margin hinzu, um Abstand zwischen den Buttons zu schaffen */
+  }
 }
 
 /* /////////////////////////NavBar.vue CSS/////////////////////////////*/
