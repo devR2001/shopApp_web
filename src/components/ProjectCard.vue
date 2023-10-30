@@ -55,10 +55,9 @@
               <button class="tab-button" @click="nextSlide">&gt;</button>
             </div>
             <div class="description-box">
-              <button class="tab-button" @click="closeOverlay">
-                Schließen
+              <button class="close-button" @click="closeOverlay">
+                {{ $t("Buttons.buttons.close") }}
               </button>
-
               <h2>Description</h2>
               <div class="info-box">
                 <p>{{ name }}</p>

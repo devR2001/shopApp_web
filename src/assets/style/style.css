@@ -110,10 +110,10 @@ a:hover {
 
 @media (max-width: 768px) {
   .tab-buttonView {
-    display: block; /* Ändert die Anzeige von inline auf block, um sie untereinander anzuordnen */
-    margin: 0; /* Entfernt den rechten Margin */
+    display: block;
+    margin: 0;
     margin-bottom: 10px;
-    text-align: center; /* Fügt einen unteren Margin hinzu, um Abstand zwischen den Buttons zu schaffen */
+    text-align: center;
   }
 }
 
@@ -475,4 +475,18 @@ div.modalContent {
   .footer {
     flex-direction: column;
   }
+}
+
+.close-button {
+  background-color: #ff5733;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.close-button:hover {
+  background-color: #ff351d;
 }
