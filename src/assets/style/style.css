@@ -405,6 +405,7 @@ div.modalContent {
   .info-field {
     margin-top: 450px;
     justify-content: center;
+    flex-direction: column;
   }
 }
 
@@ -413,6 +414,18 @@ div.modalContent {
   width: 100%;
 }
 .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #fff;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer-overlay {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -442,6 +455,7 @@ div.modalContent {
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
+    display: block;
   }
 
   .footer-left {
